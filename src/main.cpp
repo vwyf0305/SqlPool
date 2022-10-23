@@ -2,7 +2,6 @@
 #include<string>
 #include<memory>
 #include<chrono>
-#include<fmt/format.h>
 #include<fmt/core.h>
 #include "ConnectionPool.h"
 #include "MysqlCon.h"
