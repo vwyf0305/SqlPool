@@ -55,8 +55,9 @@ void test_pool_time()
 {
     auto pool = ConnectionPool::getConnectPool();
     PointTime begin = std::chrono::steady_clock::now();
-    PointTime end = std::chrono::steady_clock::now();
     op(pool,40,200);
+    PointTime end = std::chrono::steady_clock::now();
+   // op(pool,40,200);
     auto length = end-begin;
     std::string length_str = std::to_string(length.count());
     fmt::print("The duration of sqlpool is {} nanoseconds.\n", length_str);
