@@ -1,0 +1,24 @@
+[0m[38;2;0;255;0;1m[ 80%]:[0m [38;2;255;0;255;1mlinking.release SqlPool[0m
+[0m[1;38;2;255;0;0;1merror: [0m/usr/bin/ld: build/.objs/SqlPool/linux/x86_64/release/src/MysqlCon.cpp.o: in function `MysqlCon::MysqlCon()':
+MysqlCon.cpp:(.text+0x1e): undefined reference to `mysql_init'
+/usr/bin/ld: build/.objs/SqlPool/linux/x86_64/release/src/MysqlCon.cpp.o: in function `MysqlCon::~MysqlCon()':
+MysqlCon.cpp:(.text+0x4e): undefined reference to `mysql_free_result'
+/usr/bin/ld: MysqlCon.cpp:(.text+0x63): undefined reference to `mysql_close'
+/usr/bin/ld: build/.objs/SqlPool/linux/x86_64/release/src/MysqlCon.cpp.o: in function `MysqlCon::connect(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short)':
+MysqlCon.cpp:(.text+0x8f): undefined reference to `mysql_real_connect'
+/usr/bin/ld: build/.objs/SqlPool/linux/x86_64/release/src/MysqlCon.cpp.o: in function `MysqlCon::update(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+MysqlCon.cpp:(.text+0xab): undefined reference to `mysql_query'
+/usr/bin/ld: build/.objs/SqlPool/linux/x86_64/release/src/MysqlCon.cpp.o: in function `MysqlCon::query(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+MysqlCon.cpp:(.text+0xd6): undefined reference to `mysql_free_result'
+/usr/bin/ld: MysqlCon.cpp:(.text+0xea): undefined reference to `mysql_query'
+/usr/bin/ld: MysqlCon.cpp:(.text+0x104): undefined reference to `mysql_store_result'
+/usr/bin/ld: build/.objs/SqlPool/linux/x86_64/release/src/MysqlCon.cpp.o: in function `MysqlCon::next()':
+MysqlCon.cpp:(.text+0x129): undefined reference to `mysql_fetch_row'
+/usr/bin/ld: build/.objs/SqlPool/linux/x86_64/release/src/MysqlCon.cpp.o: in function `MysqlCon::getValue[abi:cxx11](int)':
+MysqlCon.cpp:(.text+0x158): undefined reference to `mysql_num_fields'
+/usr/bin/ld: build/.objs/SqlPool/linux/x86_64/release/src/MysqlCon.cpp.o: in function `MysqlCon::freeResult()':
+MysqlCon.cpp:(.text+0x2be): undefined reference to `mysql_free_result'
+/usr/bin/ld: build/.objs/SqlPool/linux/x86_64/release/src/MysqlCon.cpp.o: in function `MysqlCon::MysqlCon()':
+MysqlCon.cpp:(.text+0x2f): undefined reference to `mysql_set_character_set'
+collect2: 错误：ld 返回 1
+[0m
