@@ -13,6 +13,7 @@ set_target_properties(SqlPool PROPERTIES OUTPUT_NAME "SqlPool")
 set_target_properties(SqlPool PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/linux/x86_64/release")
 target_include_directories(SqlPool PRIVATE
     /usr/include/mysql
+    /usr/include/mysql/mysql
 )
 target_include_directories(SqlPool PRIVATE
     /usr/local/include
@@ -38,6 +39,7 @@ if(MSVC)
 endif()
 target_link_libraries(SqlPool PRIVATE
     jsoncpp
+    fmt
 )
 target_link_directories(SqlPool PRIVATE
     /usr/local/lib64

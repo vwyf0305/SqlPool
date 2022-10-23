@@ -10,7 +10,7 @@ ConnectionPool* ConnectionPool::getConnectPool() {
 }
 
 bool ConnectionPool::ParseJSONfiles() {
-    std::fstream fjson{"configs/dbconf.json"};
+    std::fstream fjson{"/home/wuyifei0305/cppfiles/SqlPool/configs/dbconf.json"};
     Json::Reader json_readr;
     Json::Value root;
     json_readr.parse(fjson, root);
@@ -34,7 +34,7 @@ bool ConnectionPool::ParseJSONfiles() {
 }
 
 ConnectionPool::ConnectionPool() {
-    if(ParseJSONfiles())
+    if(!ParseJSONfiles())
     {
         std::cout<<"Failed to parse json files.\n";
         exit(1);

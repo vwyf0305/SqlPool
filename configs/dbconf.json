@@ -1,8 +1,8 @@
 {
-  "ip": "192.168.217.128",
+  "ip": "localhost",
   "port": 3306,
   "userName": "root",
-  "passward": "123456",
+  "passward": "",
   "dbName": "testdb",
   "minSize": 100,
   "maxSize": 1024,

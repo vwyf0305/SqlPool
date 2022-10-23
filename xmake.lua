@@ -1,10 +1,10 @@
 add_rules("mode.debug", "mode.release")
 add_requires("jsoncpp", {system = true})
-
+add_requires("fmt", {system = true})
 target("SqlPool")
     set_kind("binary")
     add_files("src/*.cpp")
-    add_packages("jsoncpp")
+    add_packages("jsoncpp", "fmt")
     add_includedirs("/usr/include/mysql", "/usr/include/mysql/mysql")
     add_ldflags("-L/usr/lib64/","-lmariadb")
 
