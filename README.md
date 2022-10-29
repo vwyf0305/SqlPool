@@ -20,7 +20,7 @@ xmake build
 
 生成CMakeLists.txt:
 ```
-xmake -k cmake -y
+xmake project -k cmake -y
 ```
 
 运行:
