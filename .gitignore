@@ -1,4 +1,6 @@
 # Xmake cache
+.vscode/
+.idea/
 .xmake/
 build/
 cmake-build-debug/
